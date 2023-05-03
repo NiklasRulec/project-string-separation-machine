@@ -24,6 +24,8 @@ function separationFunction() {
   let separation2 = document.querySelector(".separ2").checked;
   console.log({ separation2 });
 
+  let buttonOutput = document.querySelector(".button-alert");
+
   if (separation1 == true && separation2 == false) {
     separationPoint = separationPoint + 0;
     console.log({ separationPoint });
@@ -32,8 +34,11 @@ function separationFunction() {
     console.log({ separationPoint });
   } else if (separation1 == false && separation2 == false) {
     console.log("Falsche Eingabe, einen Radio Button auswählen");
+    buttonOutput.innerText = "Falsche Eingabe, einen Radio Button auswählen";
   } else if (separation1 == true && separation2 == true) {
     console.log("Falsche Eingabe, nur einen Radio Button auswählen");
+    buttonOutput.innerText =
+      "Falsche Eingabe, nur einen Radio Button auswählen";
   }
 
   // ! +++++ Text Outputs

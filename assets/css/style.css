@@ -6,22 +6,36 @@
   box-sizing: border-box;
 }
 
+:root {
+  --main: #606c38;
+  --light: #fefae0;
+  --dark: #283618;
+  --space-b: 2rem;
+}
+
+@font-face {
+  font-family: "Regular";
+  src: url(../font/Poppins/Poppins-Regular.ttf);
+}
+
 html {
   font-size: 62.5%;
   overflow-x: hidden;
+  font-family: "Regular";
 }
 
 h1,
 h2 {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-b);
 }
 
 h1 {
   font-size: 5rem;
 }
 
-h2 {
+h2,
+label {
   font-size: 3rem;
 }
 
@@ -31,10 +45,6 @@ p {
 
 /* ! ++++++++++ MAIN ++++++++++ */
 
-label {
-  font-size: 2rem;
-}
-
 section {
   width: 100vw;
   height: 100vh;
@@ -42,19 +52,51 @@ section {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-color: var(--main);
+  color: var(--light);
 }
 
 form {
   width: 60%;
-  height: 60%;
+  height: 65%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
+  border: 2px solid var(--dark);
+  border-radius: 0.5rem;
+  margin-bottom: var(--space-b);
+}
+
+.input-value,
+.separation-point {
+  width: 50%;
+}
+
+.submit {
+  width: 10rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--dark);
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+  background-color: var(--main);
+  color: var(--light);
+}
+
+.submit:hover {
+  transform: scale(1.1);
+  background-color: var(--dark);
 }
 
 article {
-  width: 100%;
+  width: 60%;
+  height: 30%;
+  border: 2px solid var(--dark);
+  border-radius: 0.5rem;
+  margin-bottom: var(--space-b);
 }
 
 .outputs {
@@ -62,4 +104,24 @@ article {
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+
+.outputs div {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.output1,
+.output2 {
+  width: 90%;
+  height: 100%;
+  padding: 1rem;
+  border: 2px solid var(--light);
+  border-radius: 0.5rem;
+  background-color: var(--dark);
+  color: var(--light);
 }
