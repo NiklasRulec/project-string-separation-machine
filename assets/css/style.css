@@ -1,0 +1,65 @@
+/* ! ++++++++++ BASIC ++++++++++ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 2rem;
+}
+
+/* ! ++++++++++ MAIN ++++++++++ */
+
+label {
+  font-size: 2rem;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+form {
+  width: 60%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+article {
+  width: 100%;
+}
+
+.outputs {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
